@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Data
-public class ListResponseDTO<T> implements Serializable {
+public class ListResponseDTO<T> extends BaseResponseDTO {
 
     private long totalElements;
     private int totalPages;
@@ -16,11 +16,16 @@ public class ListResponseDTO<T> implements Serializable {
     private List<T> entries;
 
     public ListResponseDTO(Page<T> data) {
+        super(true, "success");
         if (data != null) {
             this.entries = data.getContent();
             this.totalElements = data.getTotalElements();
             this.totalPages = data.getTotalPages();
             this.pageSize = data.getNumberOfElements();
         }
+    }
+
+    public ListResponseDTO(List<T> entries){
+        setEntries(entries);
     }
 }

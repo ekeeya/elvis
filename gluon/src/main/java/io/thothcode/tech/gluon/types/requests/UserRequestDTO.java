@@ -19,4 +19,5 @@ public class UserRequestDTO implements Serializable {
     private Boolean enabled = true;
     private String email;
     private UserEntity.ROLES role;
+    private Long shopId;
 }

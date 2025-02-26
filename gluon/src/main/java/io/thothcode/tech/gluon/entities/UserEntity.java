@@ -32,6 +32,7 @@ public class UserEntity extends BaseEntity implements UserDetails {
     private String telephone;
     private ROLES role;
     private Boolean enabled;
+    private Long shopId;
 
 
     @Override

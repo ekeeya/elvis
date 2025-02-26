@@ -36,7 +36,8 @@ public class UserServiceImpl  extends BaseService implements UserService {
                         passwordEncoder.encode(req.getPassword()),
                         req.getTelephone(),
                         req.getRole(),
-                        req.getEnabled()
+                        req.getEnabled(),
+                        req.getShopId()
                 ))
                 .flatMap(user -> userRepository.save(user)
                         .map(UserResponseDTO::new)
