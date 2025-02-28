@@ -24,7 +24,6 @@ public class ProductEntity extends BaseEntity {
 
     @DBRef
     private ShopEntity shop;
-
     private List<String> images;
     private Double price;
     private List<String> sizes;
