@@ -19,11 +19,8 @@ public class ProductEntity extends BaseEntity {
 
     private String name;
     private String description;
-    @DBRef
-    private CategoryEntity category;
-
-    @DBRef
-    private ShopEntity shop;
+    private String categoryId;
+    private String shopId;
     private List<String> images;
     private Double price;
     private List<String> sizes;
